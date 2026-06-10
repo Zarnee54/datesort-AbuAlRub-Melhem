@@ -4,5 +4,17 @@
         "premium_size": 5.0,
         "standard_weight": 18,
         "standard_size": 4.0
+    },
+    "Ajwa": {
+        "premium_weight": 18,
+        "premium_size": 3.5,
+        "standard_weight": 14,
+        "standard_size": 3.0
+    },
+    "Deglet Noor": {
+        "premium_weight": 15,
+        "premium_size": 3.8,
+        "standard_weight": 12,
+        "standard_size": 3.0
     }
 }
