@@ -4,7 +4,7 @@ import csv
 
 class SampleDataCreator:
 
-    def create_varieties(self):
+    def generate_varieties(self):
         varieties = {
             "Medjool": {
                 "premium_weight": 24,
@@ -35,7 +35,7 @@ class SampleDataCreator:
         with open("varieties.json", "w", encoding="utf-8") as file:
             json.dump(varieties, file, indent=4)
 
-    def create_samples(self):
+    def generate_samples(self):
         samples = [
             ["sample_id", "variety", "weight", "size", "color"],
             [1, "Medjool", 26, 5.3, "Dark Brown"],
@@ -55,6 +55,6 @@ class SampleDataCreator:
 
 if __name__ == "__main__":
     creator = SampleDataCreator()
-    creator.create_varieties()
-    creator.create_samples()
+    creator.generate_varieties()
+    creator.generate_samples()
     print("Dataset files created successfully: varieties.json & samples.csv")
