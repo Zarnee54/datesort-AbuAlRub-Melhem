@@ -11,7 +11,16 @@ class DateClassifier:
             self.varieties = json.load(file)
 
     def classify_sample(self, variety, weight, size):
-        pass
+            if variety not in self.varieties:
+                return "Unknown"
+            self.last_result = {
+            "variety": variety,
+            "weight": weight,
+            "size": size
+            }
+            return "Pending"
+
+    
 
     def classify_samples(self, samples):
         pass
