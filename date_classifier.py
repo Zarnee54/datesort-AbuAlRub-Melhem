@@ -26,7 +26,21 @@ class DateClassifier:
     
 
     def classify_samples(self, samples):
-        pass
+        results = []
+
+        for sample in samples:
+            grade = self.classify_sample(
+                sample["variety"],
+                float(sample["weight"]),
+                float(sample["size"])
+        )
+
+            sample["grade"] = grade
+            results.append(sample)
+
+        return results
+        
+        
 
     def get_available_varieties(self):
         return list(self.varieties.keys())
