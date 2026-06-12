@@ -11,15 +11,18 @@ class DateClassifier:
             self.varieties = json.load(file)
 
     def classify_sample(self, variety, weight, size):
-            if variety not in self.varieties:
-                return "Unknown"
-            self.last_result = {
-            "variety": variety,
-            "weight": weight,
-            "size": size
-            }
-            return "Pending"
 
+        if variety not in self.varieties:
+            return "Unknown"
+        rules = self.varieties[variety]
+        if weight >= rules["premium_weight"] and size >= rules["premium_size"]:
+            return "Premium"
+        elif weight >= rules["standard_weight"] and size >= rules["standard_size"]:
+            return "Standard"
+        else:
+            return "Rejected"
+
+      
     
 
     def classify_samples(self, samples):
