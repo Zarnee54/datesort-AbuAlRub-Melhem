@@ -16,5 +16,11 @@
         "premium_size": 3.8,
         "standard_weight": 12,
         "standard_size": 3.0
+    },
+    "Sukkari": {
+        "premium_weight": 22,
+        "premium_size": 4.8,
+        "standard_weight": 17,
+        "standard_size": 3.8
     }
 }
